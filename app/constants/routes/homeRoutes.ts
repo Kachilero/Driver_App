@@ -12,7 +12,7 @@ import Home from '../../views/home/Home';
 export const homeRoutes: LayoutRoutes[] = [
   {
     path: '/home',
-    name: 'Welcome',
+    name: 'Dashboard',
     component: Home,
     layout: '/home',
     icon: ''

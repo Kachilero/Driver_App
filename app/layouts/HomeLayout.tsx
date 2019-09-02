@@ -70,7 +70,7 @@ class HomeLayout extends Component<homeProps> {
         <SideDrawer
           {...this.props}
           routes={homeRoutes}
-          headline="Home"
+          headline="Dashboard"
           onClick={() => this.handleClick()}
           onThemeClick={() => this.handleThemeClick()}
         />

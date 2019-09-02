@@ -10,7 +10,7 @@ import HomePage from '../../containers/HomePageContainer';
 const mainRoutes: LayoutRoutes[] = [
   {
     path: '/home',
-    name: 'Welcome',
+    name: 'Dashboard',
     component: HomePage,
     layout: '/home',
     icon: ''

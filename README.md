@@ -1,77 +1,53 @@
-# Typescript React Electron Boilerplate
+# Driver App
 
-This will be a "base" for any TS/React/Electron Apps that I might wanna make.
+This application strives to be a desktop enhancement for "gig drivers." That is to say people that work as independent
+contractors delivering food - or people. Allowing them to see pertinent information in one dashboard and extract
+insights from the information.
 
-This project uses [Electron React Builerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate) as a starter, usind the `typescript` variant as I don't like `flow`.
+#### Table of Content
 
-This project also gets inspiration from a [Creative Tim](https://www.creative-tim.com) [template](https://www.creative-tim.com/product/light-bootstrap-dashboard-react).
+- [Inspiration](#inspiration)
+- [Roadmap](#roadmap)
+- [Misc](#misc)
 
-I may also use some things from the [React-Admin](https://github.com/marmelab/react-admin) project in the future.
+## Inspiration
 
-## Useful links
+I've been working doing deliveries as I look for steady work and find myself frustrated with the quality of applications
+available to the "contractors" that work for delivery companies. For example, there isn't any trully good way of tracking
+milage while working. Sure, there are a few 3rd party paid apps that are aimed at tracking milage, but they have some issues,
+including not being free.
 
-[10 Typescript React Pro Tips](https://medium.com/@martin_hotell/10-typescript-pro-tips-patterns-with-or-without-react-5799488d6680) - Interesting patterns for React
-[Theming HOC Article](https://medium.com/@niwaa/simple-and-reusable-react-context-api-example-hoc-e1e50c0390ec) - This article was useful when I was going to use an HOC for theming, might come in handy latter.
+Milage aside, there is no way to really aggregate the information you may want from what these companies provide for you. One quick example
+is the fact that there isn't any way to get your average dollar amount earned. With this app I hope to provide a
+functional dashboard for drivers.
 
 ## Roadmap
 
-1. **DONE** => Create main window
-2. **DONE** => Create sidebar
-3. **DONE** => Create a default view for `main-window` which loads links to documentation and the inspiration pages above as well as this README.
-4. **Update core project** there are several NPM vulnerabilities warnings that I'm gonna take care off
-5. **Add Tests** I removed the original tests because Jest was throwing errors. I need to add them back in and write my own
-6. Create "Default" apps for the header menu
-   - **DONE** Let's start with a timer widget that goes up or down
-7. **Setting Overlay** - Add a permanent 'settings' link in the bottom of the side drawer where user defined settings will go
-8. **Theme System** **ABANDONING FOR NOW!!!** - way to toggle between preset themes, ie. light and dark
-   - This has turned into a real pain in the ass, so I'm going to need to rethink it.
-   - I'm gonna try copying `react-theme-provider`
-9. **Widget System** - I'm not sure how I'm gonna do this, but I need a way to load widgets into the main window
-10. **Layout System** - Need some way for the user to easely modify the layout.
-11. Create a way to switch projects, which will change what's in the sidebar and the main window.
-12. Need to adjust the way the side bar builds the menus so that I can switch to an accordion or something else when I want
-13. Have a way for the side drawer to collapse down, and the main window to take up the space.
+This is definately a "work in progress" but here are some of the current goals and their status
 
-## Notes about this build
+- [ ] Initial setup
+  - [ ] Set up the basic pages
+  - [ ] Set up settings page
+  - [ ] Set up Routing
+- [ ] Authentication
+  - [ ] Google Auth
+  - [ ] Local Auth(?)
+- [ ] Email Parsing
+  - [ ] Add ability to fetch email
+  - [ ] Parse emails and write them to file
+  - [ ] Extract useful information from email
+- [ ] Information Display
+  - [ ] Add library to display information
+  - [ ] Create components for each piece of information
+- [ ] Database
+  - [ ] Add SQLite
+  - [ ] Integrate into application
+- [ ] Google Maps
+  - [ ] Add ability to pull information from Google maps
+  - [ ] Use that information to cross reference with app info
+- [ ] Ongoing
+  - [ ] Styling
 
-### Structure
+## Misc
 
-The following is a rough representation of how the App is structured - not the file structure - that's next.
-
-```
-__LAYOUT { each layout would be a 'project' }
-  |__VIEW { each view is a layout inside a project which is accessible by the side bar menu }
-    |__COMPONENTS { components are the individual pieces of information in each view }
-```
-
-This is a breakdown of the file structure
-
-- app { development app files }
-
-  - components
-    - global { these are used for the basic presentation of the app }
-  - constants { for non-changing variables, originally routes and defaults but is probably changing }
-  - containers { originally these were the encompasing components, but I have changed it to be layouts. See note }
-  - dist { compiled app }
-  - layouts { These layouts define each project and what components are displayed }
-  - store { Redux store files }
-    - NAMED_FOLDERS { each of these holds the actions, reducers and type definitions needed by its named component }
-  - styles { SCSS style folders and files }
-
-    - globals { styling that is applied globally }
-
-      - bootstrap { import needed bootstrap styles here }
-
-### Notes
-
-- One thing that is only briefly mentioned in the Redux [docs](https://redux.js.org/basics/usage-with-react) is that
-  - **Presentational Components** ONLY change data by invoking callbacks
-  - **Container Components** USE REDUX
-
-### File load order
-
-- `app/index.js` => the main entry to the app. _NOTE_ Global styles are loaded here
-- `app/Routes.js` => loads the router for the app. Each route takes a `path` and a `component` prop. These are passed to `app/containers/App.js` and handled as child fragment elements.
-- `app/containers/Root.js` => Seems to handle `store` and `history`
-- `app/container/App.js` => This seems to be the body of the ap
-- `app/component/<NAME_FROM_Route.js>` => whichever component was passed as a prop in `Routes.js` is rendered here.
+I used my own React/Electron based repo to bootstrap this application. More information can be found [here](https://github.com/Kachilero/mulit-use-application)

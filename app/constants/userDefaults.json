@@ -1,0 +1,9 @@
+{
+  "default": {
+    "Navbar": {
+      "bg": "dark",
+      "variant": "dark",
+      "fixed": "top"
+    }
+  }
+}

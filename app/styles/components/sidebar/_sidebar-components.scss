@@ -1,0 +1,48 @@
+// Side bar components
+
+#components {
+  width: 100%;
+  //height: 100%;
+  overflow-y: auto;
+
+  .item {
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+    width: 100%;
+
+    a {
+      color: #fff;
+      font-size: 1.3rem;
+
+      span {
+        padding-left: 10px;
+        display: inline;
+      }
+    }
+
+    &.active {
+      background-color: lighten($react-dark, 10);
+    }
+  }
+
+  .accordion {
+    .card,
+    .card-header {
+      background-color: $react-dark;
+    }
+
+    .card-header {
+      text-align: left;
+      font-size: 1.3rem;
+
+      span {
+        display: inline;
+        padding-left: 10px;
+      }
+    }
+
+    ul li a {
+      color: #fff;
+    }
+  }
+}

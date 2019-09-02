@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component should match exact snapshot 1`] = `
+<div>
+  <div
+    className="main-child-wrapper container"
+    style={
+      Object {
+        "paddingTop": "100px",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-12"
+      >
+        <div
+          className="backButton"
+          data-tid="backButton"
+        >
+          <a
+            href="/"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-arrow-left fa-w-14 fa-3x "
+              data-icon="arrow-left"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="justify-content-md-center row"
+    >
+      <div
+        className="col-md-2"
+      >
+        <div
+          className="counter counter"
+          data-tid="counter"
+        >
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      className="justify-content-md-center row"
+    >
+      <div
+        className="col-md-10"
+      >
+        <div
+          className="btnGroup"
+        >
+          <button
+            className="btn"
+            data-tclass="btn"
+            onClick={[Function]}
+            type="button"
+          >
+            5
+          </button>
+          <button
+            className="btn"
+            data-tclass="btn"
+            onClick={[Function]}
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-plus fa-w-14 "
+              data-icon="plus"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 448 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </button>
+          <button
+            className="btn"
+            data-tclass="btn"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="fa fa-minus"
+            />
+          </button>
+          <button
+            className="btn"
+            data-tclass="btn"
+            onClick={[Function]}
+            type="button"
+          >
+            odd
+          </button>
+          <button
+            className="btn"
+            data-tclass="btn"
+            onClick={[Function]}
+            type="button"
+          >
+            async
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

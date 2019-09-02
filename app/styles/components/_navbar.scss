@@ -1,0 +1,10 @@
+// stylelint-disable declaration-no-important
+
+// Hacky override to make sure that the sticky nav is sticky
+.navbar.fixed-top {
+  position: fixed !important;
+}
+
+.nav-link.active {
+  background-color: lighten($react-dark, 10);
+}

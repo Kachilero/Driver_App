@@ -1,0 +1,14 @@
+// Just the buttons in the header
+#timer-controls {
+  button {
+    margin-left: 0.5rem;
+
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

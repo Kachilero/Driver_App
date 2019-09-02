@@ -151,5 +151,5 @@ class Home extends Component<Props, State> {
   }
 }
 
-// Chande this to use connect if needed
+// Change this to use connect if needed
 export default Home;

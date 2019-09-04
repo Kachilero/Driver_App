@@ -16,6 +16,14 @@ import { spawn, execSync } from 'child_process';
 import baseConfig from './webpack.config.base';
 import CheckNodeEnv from '../internals/scripts/CheckNodeEnv';
 
+// https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5
+import dotenv from 'dotenv';
+const env = dotenv.config().parsed;
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+
 CheckNodeEnv('development');
 
 const port = process.env.PORT || 1212;
@@ -224,7 +232,9 @@ export default merge.smart(baseConfig, {
 
     new webpack.LoaderOptionsPlugin({
       debug: true
-    })
+    }),
+
+    new webpack.DefinePlugin(envKeys)
   ],
 
   node: {

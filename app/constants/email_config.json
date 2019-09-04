@@ -1,5 +1,6 @@
 {
   "name": "Alejandro",
+  "email": "alejcerro@gmail.com",
   "imap": {
     "host": "imap.gmail.com",
     "port": 993,

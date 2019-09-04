@@ -7,16 +7,41 @@ import * as React from 'react';
 import { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 
+const emailCongig = require('../constants/email_config');
+
+// TODO: move all of these into the global store
 type UserSettingsState = {
+  emailName: string;
+  emailEmail: string;
   emailUserName: string;
   emailPassword: string;
+  emailIMAP: {
+    host: string;
+    port: number;
+    secure: boolean;
+  };
+  emailSMTP: {
+    host: string;
+    ssl: boolean;
+  };
 };
 type UserSettingsProps = {};
 
 const getInitialState = (props: UserSettingsProps): UserSettingsState => {
   return {
+    emailName: emailCongig.name,
+    emailEmail: emailCongig.email,
     emailUserName: process.env.EMAIL_USERNAME,
-    emailPassword: process.env.EMAIL_PASSWORD
+    emailPassword: process.env.EMAIL_PASSWORD,
+    emailIMAP: {
+      host: emailCongig.imap.host,
+      port: emailCongig.imap.port,
+      secure: emailCongig.imap.secure
+    },
+    emailSMTP: {
+      host: emailCongig.smtp.host,
+      ssl: emailCongig.smtp.ssl
+    }
   };
 };
 
@@ -35,8 +60,6 @@ class UserSettingsView extends Component<UserSettingsProps, UserSettingsState> {
     | undefined {
     console.log(`User Settings State`);
     console.log(this.state);
-    console.log(`Process ENV`);
-    console.log(process.env.EMAIL_USERNAME);
 
     return (
       <div id="main-child-wrapper">
@@ -53,7 +76,9 @@ class UserSettingsView extends Component<UserSettingsProps, UserSettingsState> {
                   <Col md="12">
                     <h2>Email Settings</h2>
                     <ul>
-                      <li>Email: {this.state.emailUserName}</li>
+                      <li>Name: {this.state.emailName}</li>
+                      <li>Email: {this.state.emailEmail}</li>
+                      <li>Username: {this.state.emailUserName}</li>
                       <li>Password: {this.state.emailPassword}</li>
                     </ul>
                   </Col>

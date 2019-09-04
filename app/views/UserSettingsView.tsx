@@ -1,22 +1,28 @@
 /**
- * About Page
+ * User Settings Page
+ *
+ * Change and Save user settings
  */
 import * as React from 'react';
 import { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import MarkdownRenderer from '../../components/MarkdownRenderer';
 
 type State = {};
 type Props = {};
 
-class About extends Component<Props, State> {
+class UserSettingsView extends Component<Props, State> {
   state: State;
-  constructor(props: Props) {
-    super(props);
-  }
 
-  render() {
-    const fileUrl = 'README.md';
+  render():
+    | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+    | string
+    | number
+    | {}
+    | React.ReactNodeArray
+    | React.ReactPortal
+    | boolean
+    | null
+    | undefined {
     return (
       <div id="main-child-wrapper">
         <main role="main" id="main-window" className="main_main">
@@ -24,8 +30,8 @@ class About extends Component<Props, State> {
             <div id="pg-content">
               <Container>
                 <Row>
-                  <Col md={12} id="markdown-render">
-                    <MarkdownRenderer mdFilePath={fileUrl} escapeHtml={true} />
+                  <Col md="12">
+                    <h1 className="title text-center">User Settings</h1>
                   </Col>
                 </Row>
               </Container>
@@ -37,4 +43,4 @@ class About extends Component<Props, State> {
   }
 }
 
-export default About;
+export default UserSettingsView;

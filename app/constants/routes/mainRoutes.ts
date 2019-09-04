@@ -6,6 +6,7 @@
 import { LayoutRoutes } from '../../Routes';
 import AboutPage from '../../containers/AboutPageContainer';
 import HomePage from '../../containers/HomePageContainer';
+import UserSettingsView from '../../views/UserSettingsView';
 
 const mainRoutes: LayoutRoutes[] = [
   {
@@ -13,6 +14,13 @@ const mainRoutes: LayoutRoutes[] = [
     name: 'Dashboard',
     component: HomePage,
     layout: '/home',
+    icon: ''
+  },
+  {
+    path: '/user-settings',
+    name: 'User Settings',
+    component: UserSettingsView,
+    layout: '/user-settings',
     icon: ''
   },
   {

@@ -7,6 +7,7 @@ import { LayoutRoutes } from '../../Routes';
 import AboutPage from '../../containers/AboutPageContainer';
 import HomePage from '../../containers/HomePageContainer';
 import UserSettingsView from '../../views/UserSettingsView';
+import UserLoginView from '../../views/UserLoginView';
 
 const mainRoutes: LayoutRoutes[] = [
   {
@@ -21,6 +22,13 @@ const mainRoutes: LayoutRoutes[] = [
     name: 'User Settings',
     component: UserSettingsView,
     layout: '/user-settings',
+    icon: ''
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: UserLoginView,
+    layout: '/login',
     icon: ''
   },
   {

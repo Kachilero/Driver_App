@@ -9,5 +9,6 @@
   "smtp": {
     "host": "smtp.gmail.com",
     "ssl": true
-  }
+  },
+  "GOOGLE_CLIENT_ID": "398026559810-c1bj0md12nb6bn596619bn34d2l860r5.apps.googleusercontent.com"
 }
